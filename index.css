@@ -32,7 +32,6 @@ body {
   
 
   .hero,
-  .navbar,
   main,
   aside{
     background: #eaeaea;
@@ -41,16 +40,45 @@ body {
     justify-content: center;
 
   }
+
+  .navbar{
+    background: #eaeaea;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    justify-content: flex-end;
+  }
+
+  .navbar > a {
+    padding-right: 10px;
+    color: #21211f;
+    color: #21211f;
+    font-size: 0.7rem;
+    line-height: 0;
+    letter-spacing: 0.135rem;
+    margin: -0.35rem 0 0 0;
+    font-family: "Raleway", "Helvetica Neue", Helvetica, Arial, Sans-Serif;
+    font-style: normal;
+    font-weight: 400;
+    text-decoration: none;
+  }
+
+  .navbar > a:hover {
+      color:grey;
+      text-decoration: underline;
+  }
   
 
 
-h1 { font-size: 7vw;
+h1 { font-size: 3.5rem;
     color: #21211f;
     padding: 0;
     letter-spacing: -0.1rem;
     font-family: "Raleway", "Helvetica Neue", Helvetica, Arial, Sans-Serif;
     font-style: normal;
-    font-weight: 900
+    font-weight: 900;
+    margin-bottom: -5px;
  }
 
 .hero p {
