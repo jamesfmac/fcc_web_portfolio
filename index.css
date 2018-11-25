@@ -235,14 +235,14 @@ flex-direction: column;
 }
 @media all and (max-width: 480px) {
 	html, body {
-		font-size: 8px;
+		font-size: 10px;
 	}
 	main.container section.content a {
 		padding: 1.55rem 1.5rem;
 		font-size: 1.6rem;
   }
   main.container section.content p {
-    padding: 0 0 0 15rem
+    padding: 0 0 0 5rem
   }
   main.container section.content h1 {
     font-size: 4.5rem
