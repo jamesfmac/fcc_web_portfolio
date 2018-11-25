@@ -3,13 +3,13 @@
 .page {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  grid-template-rows: 60px calc(100vh - 60px) 100% 100%  ;
+  grid-template-rows: 60px calc(100vh - 60px) calc(100vh - 60px)  ;
   grid-gap: 10px;
   grid-template-areas: 
                       "header header "
                       "main main"
                       "cont1 cont1"
-                      "cont2 cont2";
+                      ;
   /***** General Styles *****/
 	font-size: 16px;
 	line-height: 1;
@@ -52,6 +52,7 @@
 .navbar > a:hover {
     color:grey;
     text-decoration: underline;
+
 }
 
 
@@ -127,9 +128,8 @@ transition: all 0.5s ease;
 .project-section{
   grid-area: cont1;
   overflow-y: hidden;
-  height: 500px;
   background-color: e22a25;
-  border-radius: 5px;
+  border-radius: 0.35em;
 }
 
 .project-section h1{
@@ -139,28 +139,46 @@ font-style: normal;
 font-weight: 300;
 text-align: center;
 
+
 }
 
 .projects{
   display: flex;
   flex-direction: row;
-  align-items: middle;
+  flex-wrap: wrap;
+  align-items: center;
   justify-content: space-around;
   align-content: center;
+  height: 18em;
 }
 
 .project-tile {
   background-color: whitesmoke;
-  height: 1rem;
-  widows: 1rem;
-  border-radius: 5px;
-  min-height: 50px;
-  min-width: 200px;
-  text-align: center;
-  display:flex;
-align-content: center;
-justify-content: center;
+  height: 75%;
+  width: 25%;
+margin: 1em;
+border-radius: 0.35em;
+display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 2px 2px grey;
+  
+}
 
+.project-tile > a {
+  text-decoration: none;
+  
+  font-family: "Raleway", "Helvetica Neue", Helvetica, Arial, Sans-Serif;
+  font-style: normal;
+  font-weight: 400;
+  letter-spacing: 0.135rem;
+}
+
+
+.project-tile:hover{
+  opacity: .95;
+  text-decoration: underline;
+  
 }
 
 /***** Responsiveness *****/
