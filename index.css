@@ -1,47 +1,33 @@
-body {
+.page {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: 60px 100vh 100%   ;
-    grid-gap: 0.5em;
-  }
-  
-  .navbar {
-    grid-column: 1 / span 5;
-    position: sticky;
-    top: 0;
-  }
-  .hero{
-      grid-column: span 5;
-  }
-  main {
-    grid-column: 2 / span 4;
-  }
-  
-  aside {
-    grid-column:  span 1;
-  }
-  
-  @media (max-width: 700px) {
+    grid-template-rows: 60px calc(100vh - 60px) 100% 100%  ;
+    grid-gap: 10px;
+    grid-template-areas:"nav nav nav nav"
+                        "main main main main"
+                        "project project project project"
+                         ;
+  /***** General Styles *****/
+	font-size: 16px;
+	line-height: 1;
+	font-style: normal;
+	font-weight: 400;
+    height: 100%;
+	background-color: #f9f9f9;
+	padding: 0;
+	margin: 0;
+}
     
-    main,
-    aside {
-      grid-column: 1 / span 5;
-    }
-    
-  }
+
   
 
-  .hero,
-  main,
-  aside{
-    background: #eaeaea;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-  }
+ 
 
   .navbar{
+    grid-area: nav;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0px;
     background: #eaeaea;
     display: flex;
     align-items: center;
@@ -70,9 +56,17 @@ body {
   }
   
   main.container {
-    height: 100%;
+
+    /**
+    change back post fcc
+    height: inherit;
     padding: 0;
     margin: 0;
+    **/
+    height: 100vh;
+    padding: 0;
+    margin: 0;
+    margin-top: -60px;
     display: -webkit-box;
     display: -moz-box;
     display: -ms-flexbox;
@@ -80,23 +74,25 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
+    grid-area: main;
 }
 main.container section.content h1 {
 	color: #21211f;
-	font-size: 7.35rem;
+	font-size: 5.00rem;
 	padding: 0;
 	letter-spacing: -0.1rem;
 	font-family: "Raleway", "Helvetica Neue", Helvetica, Arial, Sans-Serif;
 	font-style: normal;
-	font-weight: 900;
+  font-weight: 900;
+  margin: 0;
 }
 main.container section.content p {
 	color: #21211f;
 	font-size: 0.9rem;
 	line-height: 0;
 	letter-spacing: 0.135rem;
-	margin: -0.35rem 0 0 0;
-	padding: 0 0 0 15rem;
+	margin: 0.25rem 0 0 0;
+	padding: 0 0 0 17rem;
 	font-family: monospace;
 	font-style: normal;
 	font-weight: 400;
@@ -123,4 +119,57 @@ main.container section.content a:hover {
 	transition: all 0.5s ease;
 }
 
+.navbar,
+main,
+.contacts-aside,
+#projects{
+  border:solid black; 
+  overflow-y: hidden;
+}
 
+.contacts-aside {
+  grid-area: side;
+}
+  
+.project-holder{
+  grid-area: project;
+}
+
+
+
+/***** Responsiveness *****/
+@media all and (max-width: 760px) {
+	html, body {
+		font-size: 10px;
+	}
+	main.container section.content a {
+		margin: 40px auto;
+		display: block;
+		padding: 1.35rem 1.5rem;
+		font-size: 1.4rem;
+	}
+}
+@media all and (max-width: 600px) {
+	html, body {
+		font-size: 9px;
+	}
+	main.container section.content a {
+		padding: 1.45rem 1.5rem;
+		font-size: 1.5rem;
+	}
+	footer a {
+		font-size: 28px;
+	}
+}
+@media all and (max-width: 480px) {
+	html, body {
+		font-size: 8px;
+	}
+	main.container section.content a {
+		padding: 1.55rem 1.5rem;
+		font-size: 1.6rem;
+	}
+	footer a {
+		font-size: 25px;
+	}
+}

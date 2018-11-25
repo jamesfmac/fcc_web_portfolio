@@ -12,37 +12,39 @@
 </head>
 
 <body>
-    <div class="navbar" id="navbar">
-        <a href="#contact">Contact</a>
-        <a href="#projects">Projects</a>
-    </div>
-    <main class="container">
-        <section class="content">
-            <h1>Jon Phillips</h1>
-            <p id="desc"></p>
-            <a href="mailto:jon@jonphillips.ca" title="Email Jon Phillips">Contact</a>
-        </section>
-    </main>
+    <div class="page">
+        <div class="navbar" id="navbar">
+            <a href="#contact">Contact</a>
+            <a href="#projects">Projects</a>
+        </div>
+       
+        <main class="container" id="welcome-section">
+            <section class="content">
+                <h1>James McManamey</h1>
+                <p id="desc"></p>
+                <a href="mailto:jfmcmanamey@gmail.com" title="Email James McManamey">Contact</a>
+            </section>
+        </main>
+        
 
-    <aside id='contact'>
-        Sidebar
-    </aside>
-    <main id="projects">
-        Main
-    </main>
+        <div id="projects" class="project-holder">
+            Projects
+        </div>
 
-    <script>
-        var showText = function (target, message, index, interval) {
-            if (index < message.length) {
-                $(target).append(message[index++]);
-                setTimeout(function () { showText(target, message, index, interval); }, interval);
+
+        <script>
+            var showText = function (target, message, index, interval) {
+                if (index < message.length) {
+                    $(target).append(message[index++]);
+                    setTimeout(function () { showText(target, message, index, interval); }, interval);
+                }
             }
-        }
-        $(function () {
-            delay(500).showText("#desc", ["Product", " | Technology", " | Growth"], 0, 700);
-        });
-    </script>
-    <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+            $(function () {
+                showText("#desc", ["Product", " | Technology", " | Growth"], 0, 700);
+            });
+        </script>
+        <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+    </div>
 </body>
 
 </html>
