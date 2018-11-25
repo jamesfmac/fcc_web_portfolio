@@ -66,6 +66,19 @@
             $(function () {
                 showText("#desc", ["Product |" , " Technology", " | Growth"], 0, 900);
             });
+            
+        </script>
+
+        <script>
+                $(window).scroll(function() {    
+                    var scroll = $(window).scrollTop();
+                
+                    if (scroll >= 10) {
+                        $(".navbar").addClass("nav-shadow");
+                    } else {
+                        $(".navbar").removeClass("nav-shadow");
+                    }
+                })
         </script>
         <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
     </div>
