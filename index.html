@@ -1,87 +1,66 @@
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <meta name="description" content="James McManamey is an experienced consultant and business builder focused on digital products and consulting teams/>
-	<meta name="keywords" content="Jon McManamey, product, growth, technology, strategy, Sydney, San Diego "/>
-	<meta name="author" content="James McManamey" />
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <meta name="description" content="James McManamey is an experienced
+    consultant and business builder focused on digital products and consulting
+    teams/>
+    <meta
+      name="keywords"
+      content="James McManamey, product, growth, technology, strategy, Sydney, San Diego "
+    />
+    <meta name="author" content="James McManamey" />
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     <link rel="stylesheet" href="index.css" />
-    <link rel="Shortcut Icon" href="/j-favicon.ico" type="image/x-icon" />
-
+    <link rel="Shortcut Icon" href="/j_favicon_HCX_icon.ico" type="image/x-icon" />
 
     <title>James McManamey</title>
-</head>
+  </head>
 
-<body>
+  <body>
     <div class="page">
-        <div class="navbar" id="navbar">
-            <a href="#https://github.com/jamesfmac" id="profile-link" target="_blank">Github</a>
-            <a href="#projects">Projects</a>
+      <div class="navbar" id="navbar">
+        <a
+          href="#https://github.com/jamesfmac"
+          id="blog-link"
+          target="_blank"
+          >Blog</a>
+        <a 
+        href="https://www.linkedin.com/in/jamesmcmanamey/"
+        id="about-link"
+        target="_blank">About</a>
+      </div>
+
+      <main class="container" id="welcome-section">
+        <section class="content">
+          <h1>James McManamey</h1>
+          <p id="desc"></p>
+          <a href="mailto:jfmcmanamey@gmail.com" title="Email James McManamey"
+            >Contact</a
+          >
+        </section>
+        <div class="social-links">
+            <a class="tw" href="https://twitter.com/jamesmcmanamey" title="James McManamey on Twitter"><span class="icon-twitter"></span></a>
+            <a class="li" href="https://www.linkedin.com/in/jamesmcmanamey/" title="James McManamey on LinkedIn"><span class="icon-linkedin"></span></a>
         </div>
-
-        <main class="container" id="welcome-section">
-            <section class="content">
-                <h1>James McManamey</h1>
-                <p id="desc"></p>
-                <a href="mailto:jfmcmanamey@gmail.com" title="Email James McManamey">Contact</a>
-            </section>
-        </main>
-
-
-        <div id="projects" class="project-section">
-            <h1>Free Code Camp Projects</h1>
-            <div class="projects">
-
-                <div class="project-tile">
-                        <img src="fcc_logo.png" />
-                    <a href="https://jamesfmac.github.io/fcc_web_tribute/" >
-                    Product Tribute Page</a>
-                    
-                </div>
-                <div class="project-tile">
-                        <img src="fcc_logo.png" />
-                    <a href="https://jamesfmac.github.io/fcc_web_techdocumentation/">JS ES6 Documentation</a>
-                    
-                </div>
-                <div class="project-tile">
-                        <img src="fcc_logo.png" />
-                    <a href="https://jamesfmac.github.io/fcc_web_survey/"> Survey </a>
-                </div>
-            </div>
-
-        </div>
-
-
-        <script>
-            var showText = function (target, message, index, interval) {
-                if (index < message.length) {
-                    $(target).append(message[index++]);
-                    setTimeout(function () { showText(target, message, index, interval); }, interval);
-                }
-            }
-            $(function () {
-                showText("#desc", ["Product |" , " Technology", " | Growth"], 0, 900);
-            });
-            
-        </script>
-
-        <script>
-                $(window).scroll(function() {    
-                    var scroll = $(window).scrollTop();
-                
-                    if (scroll >= 10) {
-                        $(".navbar").addClass("nav-shadow");
-                    } else {
-                        $(".navbar").removeClass("nav-shadow");
-                    }
-                })
-        </script>
-        <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+      </main>
     </div>
-</body>
 
+      <script>
+        var showText = function(target, message, index, interval) {
+          if (index < message.length) {
+            $(target).append(message[index++]);
+            setTimeout(function() {
+              showText(target, message, index, interval);
+            }, interval);
+          }
+        };
+        $(function() {
+          showText("#desc", ["","Product |", " Technology |", " Growth"], 0, 900);
+        });
+      </script>
+    </div>
+  </body>
 </html>
